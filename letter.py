@@ -4,12 +4,12 @@ data = pd.read_csv('letterdata.csv')
 print(data)
 x = data.iloc[:,1:]
 y = data.iloc[:,:1]
-x.isnull().any()
-y.isnull().any()
+print(x.isnull().any())
+print(y.isnull().any())
 from sklearn import model_selection
 train_data,test_data,train_target,test_target = model_selection.train_test_split(x,y)
-train_data
-test_data
+print(train_data)
+print(test_data)
 from sklearn import svm
 
 
